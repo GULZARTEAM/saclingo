@@ -12,7 +12,6 @@ asyncio
 dnspython
 ffmpeg-python
 future
-git+https://github.com/kaalmous/downloader@kaal
 motor
 pillow
 psutil
