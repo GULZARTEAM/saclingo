@@ -1,3 +1,0 @@
-icon: https://raw.githubusercontent.com/ABHIMUSICTEAM/Jerry/main/etc/thumb.jpg
-deploy:
-    - okteto stack deploy --build -f docker-compose.yml
