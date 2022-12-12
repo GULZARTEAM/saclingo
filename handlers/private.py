@@ -10,9 +10,10 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 @Client.on_message(filters.command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/308e874f6021d77458941.mp4",
+        photo=f"https://te.legra.ph/file/4b92d44d3d41897e367ae.jpg",
         caption=f"""**ᴛʜɪꜱ ᴍᴜꜱɪᴄ ʙᴏᴛ ɪꜱ ᴀᴅᴠᴀɴᴄᴇ ᴀɴᴅ ɴᴏ ʟᴀɢ ᴜꜱᴇ ɪᴛ ᴄᴏɴᴛɪɴᴜᴏᴜꜱʟʏ .
 ᴄᴏᴅᴇʀ :- [ʙᴀᴅᴇ ʟᴏɢ](https://t.me/nobitadev)
+
 ɪꜰ ʏᴏᴜ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛᴇʟʟ ʜᴇʀᴇ = [ʙᴀᴅᴇ ʟᴏɢ](https://t.me/nobitadev)**""",
     reply_markup=InlineKeyboardMarkup(
             [
