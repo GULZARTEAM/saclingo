@@ -162,7 +162,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/nobitadev"), 
+                            url=f"https://t.me/PAPA_HUNTERX"), 
                 
 
                     InlineKeyboardButton(
@@ -205,7 +205,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/nobitadev"),
+                            url=f"https://t.me/PAPA_HUNTERX"),
                 
                    
                     InlineKeyboardButton(
@@ -225,7 +225,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/nobitadev"),
+                            url=f"https://t.me/PAPA_HUNTERX"),
 
 
                     InlineKeyboardButton(
@@ -283,7 +283,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/always_worng_45"),
+                            url=f"https://t.me/PAPA_HUNTERX"),
                 
                   
                     InlineKeyboardButton(
