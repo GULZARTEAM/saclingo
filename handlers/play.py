@@ -162,9 +162,9 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/nobitadev")
-                ],
-                [   
+                            url=f"https://t.me/nobitadev"), 
+                
+
                     InlineKeyboardButton(
                             text="【 𝙂𝙍𝙊𝙐𝙋 】",
                             url=f"https://t.me/ABHI_WORLD_YAARON")
@@ -205,9 +205,9 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/always_worng_45")
-                ],
-                [   
+                            url=f"https://t.me/nobitadev"),
+                
+                   
                     InlineKeyboardButton(
                             text="【 𝙂𝙍𝙊𝙐𝙋 】",
                             url=f"https://t.me/ABHI_WORLD_YAARON")
@@ -225,7 +225,12 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/always_worng_45")
+                            url=f"https://t.me/nobitadev"),
+
+
+                    InlineKeyboardButton(
+                            text="【 𝙂𝙍𝙊𝙐𝙋 】",
+                            url=f"https://t.me/ABHI_WORLD_YAARON")
                ]
             ]
         )
@@ -278,9 +283,9 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/always_worng_45")
-                ],
-                [   
+                            url=f"https://t.me/always_worng_45"),
+                
+                  
                     InlineKeyboardButton(
                             text="【 𝙂𝙍𝙊𝙐𝙋 】",
                             url=f"https://t.me/ABHI_WORLD_YAARON")
