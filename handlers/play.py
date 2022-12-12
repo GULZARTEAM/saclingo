@@ -152,7 +152,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://te.legra.ph/file/de5bda0530d12918d8ba5.jpg"
+        thumb_name = "https://te.legra.ph/file/d5a5a46cee69df5a11525.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -162,7 +162,12 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
-                            url=f"https://t.me/always_worng_45")
+                            url=f"https://t.me/nobitadev")
+                ],
+                [   
+                    InlineKeyboardButton(
+                            text="【 𝙂𝙍𝙊𝙐𝙋 】",
+                            url=f"https://t.me/ABHI_WORLD_YAARON")
                ]
             ]
         )
@@ -201,13 +206,18 @@ async def play(_, message: Message):
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
                             url=f"https://t.me/always_worng_45")
+                ],
+                [   
+                    InlineKeyboardButton(
+                            text="【 𝙂𝙍𝙊𝙐𝙋 】",
+                            url=f"https://t.me/ABHI_WORLD_YAARON")
                ]
             ]
         )
 
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://te.legra.ph/file/de5bda0530d12918d8ba5.jpg"
+            thumb_name = "https://te.legra.ph/file/d5a5a46cee69df5a11525.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
@@ -269,6 +279,11 @@ async def play(_, message: Message):
                     InlineKeyboardButton(
                             text="【 𝙊𝙒𝙉𝙀𝙍 】",
                             url=f"https://t.me/always_worng_45")
+                ],
+                [   
+                    InlineKeyboardButton(
+                            text="【 𝙂𝙍𝙊𝙐𝙋 】",
+                            url=f"https://t.me/ABHI_WORLD_YAARON")
                ]
             ]
         )
