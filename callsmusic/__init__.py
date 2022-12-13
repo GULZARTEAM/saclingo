@@ -1,2 +1,2 @@
-from .callsmusic import pytgcalls, call_py, client
+from .callsmusic import pytgcalls, run
 from . import queues
