@@ -1,30 +1,35 @@
 
 import asyncio
+from pyrogram.types import Message
 from pyrogram import Client, filters
-from pyrogram.types import Dialog, Chat, Message
+from helpers.filters import command, other_filters
 from pyrogram.errors import UserAlreadyParticipant
-from callsmusic.callsmusic import client as parth
-from config import SUDO_USERS
+from helpers.decorators import authorized_users_only
+from callsmusic.callsmusic import client as user
 
-@Client.on_message(filters.command(["gcast", "broadcast"]))
-async def broadcast(_, message: Message):
-    sent=0
-    failed=0
-    if message.from_user.id not in SUDO_USERS:
-        return
-    else:
-        wtf = await message.reply("** 😘ꜱᴛᴀʀᴛ ʙʀᴏᴀᴅᴄᴀꜱᴛ ʙᴀʙʏ...**")
-        if not message.reply_to_message:
-            await wtf.edit("**😚 ʀᴇᴘʟʏ ᴋᴀʀᴏ ᴊᴀᴀɴ ...**")
-            return
-        lmao = message.reply_to_message.text
-        async for dialog in parth.iter_dialogs():
-            try:
-                await parth.send_message(dialog.chat.id, lmao)
-                sent = sent+1
-                await wtf.edit(f"**😘ʙʀᴏᴀᴅᴄᴀꜱᴛɪɴɢ ʙᴀʙʏ ...** \n\n**✔️ ꜱᴇɴᴛ ᴛᴏ:** `{sent}` **ᴄʜᴀᴛꜱ** \n**❌ ꜰᴀɪʟᴇᴅ ɪɴ:** `{failed}` **ᴄʜᴀᴛꜱ**")
-                await asyncio.sleep(3)
-            except:
-                failed=failed+1
-        await wtf.delete()
-        await message.reply_text(f"**😚ʙʀᴏᴀᴅᴄᴀꜱᴛ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴊᴀᴀɴᴜ ...**\n\n**✔️ ꜱᴇɴᴛ ᴛᴏ:** `{sent}` **ᴄʜᴀᴛꜱ**\n**❌ ꜰᴀɪʟᴇᴅ ɪɴ:** `{failed}` **ᴄʜᴀᴛꜱ**")
+
+@Client.on_message
+        (command(["userbotjoin", "assistant"]) & ~filters.private & ~filters.bot
+)
+@authorized_users_only
+async def join_chat(c: Client, m: Message):
+    chat_id = m.chat.id
+    try:
+        invite_link = await m.chat.export_invite_link()
+        if "+" in invite_link:
+            link_hash = (invite_link.replace("+", "")).split("t.me/")[1]
+            await user.join_chat(f"https://t.me/joinchat/{link_hash}")
+        await m.chat.promote_member(
+            (await user.get_me()).id,
+            can_manage_voice_chats=True
+        )
+        return await user.send_message(chat_id, "🤔ᴀᴘɴᴇ ʙᴜʟᴀʏᴀ😝 ᴋᴇs ʟɪʏᴇ🧐")
+    except UserAlreadyParticipant:
+        admin = await m.chat.get_member((await user.get_me()).id)
+        if not admin.can_manage_voice_chats:
+            await m.chat.promote_member(
+                (await user.get_me()).id,
+                can_manage_voice_chats=True
+            )
+            return await user.send_message(chat_id, "🙄ʜᴜᴍ ʏᴀʜɪ ☠️ʜᴀɪ ʙᴇᴛᴀ😁")
+        return await user.send_message(chat_id, "🙄ʜᴜᴍ ʏᴀʜɪ ☠️ʜᴀɪ ʙᴇᴛᴀ😁")
